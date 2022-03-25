@@ -1,0 +1,260 @@
+
+:root{
+    --radius:5px;
+    --light-color:#f6f7f9;
+    --main-color:rgb(245, 23, 103);
+    --large-font-size: 3rem;
+    --h2-font-size: 1.25rem;
+    --second-color:#051E34;
+
+}
+
+body{
+    background-color: var(--light-color) !important;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none !important;
+    
+}
+
+
+
+
+header{
+    padding: 20px;
+    box-shadow: 0 12px 10px  #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: var(--light-color);
+    width: 100%;
+}
+
+
+header .Header_Links span{
+ width: 20px;
+ height: 2px;
+ background-color: black;
+ display: block;
+ margin-bottom: 5px;
+}
+
+header .offcanvas-body{
+ background-color:var(--second-color);
+}
+
+header .nav-item .nav-link{
+ color: #fff !important;
+ font-size: 20px;
+}
+
+header .nav-item .nav-link.active{
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+
+header .nav-item .nav-link:hover{
+    color: var(--main-color);
+}
+
+   
+
+/* Starting About */
+#about{
+    padding-top: 100px;
+}
+
+#about .about_right{
+    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+}
+
+ #about h2{
+  font-size: var(--large-font-size);
+  font-weight: 900;
+ }
+
+ #about .about_left a{
+  color: var(--main-color);
+ }
+
+ #about .about_left span{
+background-color: var(--main-color);
+padding: 5px;
+ }
+
+ #about .about_left p{
+   margin: 30px 0;
+   line-height: 1.4;
+   letter-spacing: 1px;
+   font-size: 18px;
+ }
+
+ #about .about_left ul li{
+     margin-right: 15px;
+     font-size: 40px;
+     display: inline-block;
+ }
+/* Ending About */
+
+/* Starting skills */
+  #skills{
+      padding: 40px 0;
+  }
+
+  #skills .skill-container{
+    position: relative;  
+    background-color: var(--light-color);
+    padding: 10px;
+    border-radius: var(--radius);
+    box-shadow: 0px 1px 10px rgb(0 0 0 / 37%);
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
+  #skills .skill-container::after{
+      content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background-color: var(--main-color);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    transition: .4s height;
+}
+
+#skills .skill-container::before{
+    content: '';
+  position: absolute;
+  width:0;
+  height:4px ;
+  background-color: var(--main-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  transition: .4s width;
+}
+
+#skills .skill-container:hover::after{
+    height: 0;
+}
+
+#skills .skill-container:hover::before{
+    width:100%;
+}
+
+#skills h2.skills-title,#Projects h2.skills-title{
+     color: #fff;
+     background-color:var(--main-color);
+     padding:  0px 10px;
+     text-transform: uppercase;
+     border-radius: var(--radius);
+     max-width: fit-content;
+     margin: 30px auto;
+     font-size: var(--large-font-size);
+     font-weight: 700;
+}
+/* Ending Skills */
+
+/* Starting Projects */
+ #Projects{
+     padding: 50px 0;
+ }
+
+ #Projects .Project_item{
+     border:2px dashed var(--second-color);
+     border-radius: 5px;
+ }
+
+ #Projects .Project_item .Project_img_container{
+     padding: 5px;
+     border-radius: 5px;
+ }
+ #Projects .Project_item .Project_img_container img{
+    border-radius: 5px; 
+ }
+
+ #Projects .Project_img_container{
+     position: relative;
+     overflow: hidden;
+ }
+
+ .project_overlay{
+     position: absolute;
+     width: 100%;
+     height:0;
+     background-color: rgba(5, 30, 52, 0.8);
+     bottom: 0;
+     left: 0;
+     right: 0;
+     transition: .4s height;
+     opacity: 0;
+ }
+
+ #Projects .Project_img_container:hover .project_overlay{
+    height:100%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+ }
+
+#Projects .Project_img_container .project_overlay a{
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 24px;
+ }
+/* Ending Projects */
+
+/* Starting Footer */
+footer{
+ background-color:var(--second-color);
+ padding: 50px;   
+ text-align: center;
+ color: #fff;
+}
+
+footer h2{
+ color: #fff;
+ font-size: 50px;
+ text-transform: uppercase;
+ letter-spacing: 5px;
+}
+
+footer ul li{
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+li.footer-linkedin-githup i{
+    color: #fff;
+    font-size: 35px;
+}
+
+footer li.footer-call{
+font-size: 20px;
+}
+
+/* Ending Footer */
+
+
+
+@media(max-width: 576px){
+    h1,h2{
+        font-size: 30px !important;
+    }
+}
